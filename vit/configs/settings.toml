@@ -1,0 +1,40 @@
+#Input path for maldi-tof data
+input_path = "/Volumes/T7/MALDI_TOF/DRIAMS/ESKAPES/binning_preprocessed"
+label_path = "/Volumes/T7/MALDI_TOF/DRIAMS/eskapes_multiclass_labels.csv"
+train_id_path = "/Volumes/T7/MALDI_TOF/DRIAMS/eskapes_multiclass_train_ids.txt"
+val_id_path = "/Volumes/T7/MALDI_TOF/DRIAMS/eskapes_multiclass_val_ids.txt"
+test_id_path = "/Volumes/T7/MALDI_TOF/DRIAMS/eskapes_multiclass_test_ids.txt"
+normalising_factor = 0.0048995728791545
+outdir = "/Users/Andy/Dropbox/git_repos/amr-maldi-transfer-learning/experiments/outputs/vanilla_DNN"
+prediction_task = "multiclass"
+
+model="VanillaViT" # [VanillaDNN, VaillaViT]
+num_classes = 7
+
+# VanillaViT settings
+VVIT_image_size = [1, 18000]
+VVIT_channels = 1
+VVIT_patch_size = [1, 6]
+VVIT_dim = 7
+VVIT_depth = 6
+VVIT_heads = 16
+VVIT_num_classes = 7
+VVIT_mlp_dim = 512
+VVIT_pool = "mean"
+VVIT_dim_head = 2
+VVIT_dropout = 0.2
+VVIT_emb_dropout = 0.1
+
+# VanillaDNN settings
+VDNN_input_shape = 18000
+VDNN_num_classes = 7
+
+# Deep learning settings
+num_workers = 6
+num_epochs = 500
+batch_size = 128
+learning_rate = 1e-3
+dropout = 0.2
+num_ckpts = 5
+lightning_logs = "/Users/Andy/Dropbox/git_repos/amr-maldi-transfer-learning/experiments/lightning_logs/vanilla_DNN" 
+
