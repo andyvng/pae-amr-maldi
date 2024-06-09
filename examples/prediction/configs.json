@@ -1,0 +1,11 @@
+{
+  "input_dir": "spectra_dir",
+  "ast_label_path": "ast_data.csv",
+  "train_id_path": "train_ids.txt",
+  "test_id_path": "test_ids.txt",
+  "smote_id_path": "",
+  "extra_features_path": "",
+  "bins_path": "dynamic_binning_features.pkl",
+  "run_shap": 0,
+  "output_dir": "results"
+}
